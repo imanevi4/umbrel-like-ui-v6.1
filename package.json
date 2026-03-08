@@ -1,0 +1,17 @@
+{
+  "name": "umbrel-like-ui-v6",
+  "version": "6.0.0",
+  "description": "Self-hosted control portal with auth, groups, widgets, theming and docker autodiscovery",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "hash-password": "node scripts/hash-password.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1",
+    "session-file-store": "^1.5.0"
+  }
+}

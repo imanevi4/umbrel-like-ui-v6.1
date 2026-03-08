@@ -1,0 +1,77 @@
+{
+  "servers": [
+    {
+      "id": "srv-example-1",
+      "name": "Example 1",
+      "ip": "11.22.33.44",
+      "baseUrl": "https://example.com",
+      "description": "Primary demo host",
+      "expanded": true,
+      "order": 1,
+      "tags": ["prod"],
+      "iconUrl": ""
+    },
+    {
+      "id": "srv-example-2",
+      "name": "Example 2",
+      "ip": "11.22.33.44",
+      "baseUrl": "https://example.com",
+      "description": "Secondary demo host",
+      "expanded": true,
+      "order": 2,
+      "tags": ["backup"],
+      "iconUrl": ""
+    }
+  ],
+  "services": [
+    {
+      "id": "svc-example-n8n",
+      "serverId": "srv-example-1",
+      "name": "n8n",
+      "url": "https://example.com",
+      "description": "Workflow Automation",
+      "category": "Automation",
+      "iconUrl": "",
+      "healthUrl": "https://example.com",
+      "checkMethod": "http",
+      "pinned": true,
+      "order": 1,
+      "credentials": [{ "id": "cred-1", "label": "Username", "value": "demo", "secret": false, "copyable": true }],
+      "links": [{ "id": "link-1", "label": "Docs", "url": "https://example.com" }],
+      "notes": ""
+    },
+    {
+      "id": "svc-example-db",
+      "serverId": "srv-example-1",
+      "name": "PostgreSQL",
+      "url": "postgres://demo@example.com:5432",
+      "description": "Relational Database",
+      "category": "Database",
+      "iconUrl": "",
+      "healthUrl": "",
+      "checkMethod": "disabled",
+      "pinned": false,
+      "order": 2,
+      "credentials": [{ "id": "cred-2", "label": "Password", "value": "change-me", "secret": true, "copyable": true }],
+      "links": [],
+      "notes": "Demo only"
+    },
+    {
+      "id": "svc-example-ui",
+      "serverId": "srv-example-2",
+      "name": "Open WebUI",
+      "url": "https://example.com",
+      "description": "Chat UI",
+      "category": "AI",
+      "iconUrl": "",
+      "healthUrl": "https://example.com",
+      "checkMethod": "http",
+      "pinned": true,
+      "order": 1,
+      "credentials": [],
+      "links": [],
+      "notes": ""
+    }
+  ],
+  "meta": { "version": 6, "updatedAt": "2026-03-08T00:00:00.000Z" }
+}

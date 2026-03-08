@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umbrel-like Portal v6.1</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="top-shell panel">
+      <div>
+        <div class="badge" id="portalBadgeText"></div>
+        <h1 id="portalTitle"></h1>
+        <p id="portalSubtitle" class="muted"></p>
+      </div>
+      <div class="header-actions">
+        <div id="userArea"></div>
+        <button class="btn" id="toggleStatsBtn">Показатели</button>
+        <button class="btn" id="discoveryBtn">Autodiscovery</button>
+        <button class="btn" id="exportBtn">Экспорт</button>
+        <button class="btn" id="importBtn">Импорт</button>
+        <button class="btn primary admin-only" id="addServerBtn">+ Сервер</button>
+        <button class="btn primary admin-only" id="addServiceBtn">+ Сервис</button>
+        <button class="btn" id="settingsBtn">Настройки</button>
+      </div>
+    </header>
+
+    <input type="file" id="importFileInput" accept="application/json" hidden />
+
+    <section class="toolbar panel">
+      <div class="toolbar-left"><input id="searchInput" class="input" placeholder="Поиск по серверам, сервисам, URL, notes, credentials, links" /></div>
+    </section>
+
+    <section class="stats-wrap" id="statsWrap"></section>
+
+    <section class="widgets-wrap panel" id="widgetsWrap">
+      <div class="section-head"><h2>Виджеты</h2></div>
+      <div class="widgets-grid" id="widgetsGrid"></div>
+    </section>
+
+    <main id="serversRoot" class="servers-root"></main>
+  </div>
+  <div id="modalRoot"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

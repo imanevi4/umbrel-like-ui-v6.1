@@ -1,0 +1,18 @@
+services:
+  portal:
+    build: .
+    container_name: selfhosted-portal
+    ports:
+      - "8088:3000"
+    environment:
+      PORT: "3000"
+      SSL_ENABLED: "true"
+      SESSION_SECRET: "CHANGE_ME_TO_A_LONG_RANDOM_SECRET"
+      ADMIN_BOOTSTRAP_USERNAME: "admin"
+      ADMIN_BOOTSTRAP_PASSWORD_HASH: ""
+      TRUST_PROXY: "false"
+    volumes:
+      - ./data:/app/data
+      - ./certs:/app/certs
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

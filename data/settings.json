@@ -1,0 +1,16 @@
+{
+  "portalBadgeText": "IAM Umbrel-like Control Portal",
+  "portalTitle": "Привет!",
+  "portalSubtitle": "Группы из серверов, сервисы на серверах внутри групп, пользователи, темы, docker autodiscovery и быстрый поиск и переход по сервисам.",
+  "footerText": "",
+  "statsMode": "compact",
+  "densityMode": "comfortable",
+  "actionButtonsStyle": "icons-with-text",
+  "actionButtonsVisibility": "always-visible",
+  "widgets": [
+    { "id": "widget-disk", "type": "disk", "enabled": true, "order": 1, "size": "sm" },
+    { "id": "widget-ram", "type": "ram", "enabled": true, "order": 2, "size": "sm" },
+    { "id": "widget-auth-log", "type": "auth-log", "enabled": true, "order": 3, "size": "md" },
+    { "id": "widget-online-users", "type": "online-users", "enabled": true, "order": 4, "size": "md" }
+  ]
+}
